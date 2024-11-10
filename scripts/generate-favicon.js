@@ -3,7 +3,6 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
-// Get current file's directory when using ES modules
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -13,7 +12,7 @@ async function generateFavicon() {
     const outputPath = path.join(process.cwd(), 'public/favicon.ico');
 
     await sharp(inputPath)
-      .resize(32, 32) // Standard favicon size
+      .resize(32, 32)
       .toFormat('png')
       .toFile(outputPath.replace('.ico', '.png'));
 

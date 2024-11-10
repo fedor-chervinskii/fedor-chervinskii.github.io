@@ -2,9 +2,11 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "generate-favicon": "ts-node --esm scripts/generate-favicon.ts",
+    "build": "ts-node --esm scripts/generate-favicon.ts && next build",
     "start": "next start",
     "lint": "next lint"
   },

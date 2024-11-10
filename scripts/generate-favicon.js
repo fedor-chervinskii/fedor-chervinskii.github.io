@@ -1,5 +1,11 @@
 import sharp from 'sharp';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Get current file's directory when using ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 async function generateFavicon() {
   try {
@@ -17,4 +23,4 @@ async function generateFavicon() {
   }
 }
 
-generateFavicon();  
+generateFavicon(); 

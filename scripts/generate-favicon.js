@@ -1,10 +1,5 @@
-import sharp from 'sharp';
-import path from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const sharp = require('sharp');
+const path = require('path');
 
 async function generateFavicon() {
   try {

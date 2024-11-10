@@ -6,14 +6,17 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname: 'cdn.jsdelivr.net',
+      },
+      {
+        protocol: 'https',
+        hostname: 'api.iconify.design',
       },
     ],
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/fedor-chervinskii.github.io' : '',
   eslint: {
-    ignoreDuringBuilds: true,
-  },
+    ignoreDuringBuilds: true
+  }
 };
 
 module.exports = nextConfig;
